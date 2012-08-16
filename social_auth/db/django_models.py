@@ -28,7 +28,7 @@ class UserSocialAuth(models.Model, UserSocialAuthMixin):
     User = UserModel
     user = models.ForeignKey(UserModel, related_name='social_auth')
     provider = models.CharField(max_length=32)
-    uid = models.CharField(max_length=255)
+    uid = models.CharField(max_length=218)
     extra_data = JSONField(default='{}')
 
     class Meta:
